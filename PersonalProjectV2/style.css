@@ -3,3 +3,29 @@ canvas {
   top: 0%;
   left: 0%;
 }
+
+.actual-elements{
+  position: absolute;
+  margin: 0%;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: .2rev 30% 30%;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
