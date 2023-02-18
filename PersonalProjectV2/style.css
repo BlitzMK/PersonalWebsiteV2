@@ -21,19 +21,33 @@ main {
   position: absolute;
   width: 100%;
   margin: 0px auto;
-  padding: 120px 0px;
+  padding: 40px 0px;
   
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
 
 main > h1{
     
     color:var(--grey);
-    grid-column-start: 10;
+    grid-column-start: 6;
     grid-column-end: 12;
+    grid-row: 1;
     text-align: center;
     font-size: 3rem;
     padding: 2rem;
     margin-bottom: var(--spacing);
+}
+
+.aboutMe{
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  background-color: var(--blue);
+}
+
+.aboutMe > p{
+  font-size: medium;
 }
