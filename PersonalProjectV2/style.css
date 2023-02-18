@@ -7,6 +7,13 @@
 
 }
 
+@font-face {
+  font-family:'Ultra';
+  src: url(PersonalProjectV2\Assets\Ultra.otf) format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 canvas {
   position: fixed;
   top: 0%;
@@ -35,10 +42,13 @@ main > h1{
     grid-column-end: 12;
     grid-row: 1;
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 2rem;
     margin-bottom: var(--spacing);
-}
+    font-family: 'Ultra';
+    font-style: normal;
+  }
+
 
 .aboutMe{
   grid-column-start: 2;
@@ -47,7 +57,9 @@ main > h1{
   grid-row-end: 4;
   background-color: var(--blue);
 }
-
+.aboutMe > h2{
+  font-family: 'Ultra';
+}
 .aboutMe > p{
   font-size: medium;
 }
