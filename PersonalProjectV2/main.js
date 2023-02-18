@@ -2,6 +2,7 @@ import './style.css'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight, 0.1,1000);
@@ -12,12 +13,14 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize( window.innerWidth, window.innerHeight);
+
 camera.position.setZ(30);
 
 renderer.render(scene,camera);
 
+// defining the cell in the center of the site 
 const geometry = new THREE.TorusGeometry(20,2,10,100);
-const material = new THREE.MeshStandardMaterial({color: 0xFF6347});
+const material = new THREE.MeshStandardMaterial({color:0x529EE9});
 const Outer1 = new THREE.Mesh(geometry, material);
 
 const geometry2 = new THREE.TorusGeometry(15,2,10,100);
@@ -33,44 +36,39 @@ scene.add(Outer1);
 scene.add(Outer2);
 scene.add(Outer3);
 
-const pointLight = new THREE.PointLight(0xFFFFFF);
+//setting lights in the scene
+const pointLight = new THREE.PointLight(0xffffff);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 pointLight.position.set(20,20,20);
-
 scene.add(pointLight,ambientLight);
 
-
-function addStar(){
+function AddStar(){
+  //defines the shape and chars of the star 
   const geometry = new THREE.SphereGeometry(0.25,24,24);
-  const material = new THREE.MeshStandardMaterial({color: 0xffffff});
+  const material = new THREE.MeshStandardMaterial({color: 0xffe4f2});
   const star = new THREE.Mesh(geometry, material);
 
-  
+  //randomly places star in scene 
   const [x,y,z] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread(300));
   star.position.set(x,y,z);
   scene.add(star);
-  
-  
 }
 
 const n = 200
 for(let i =0; i<n; i++){
-  addStar()
+  AddStar();
 }
 
-/*
-const spaceTexture = new THREE.TextureLoader().load('tree-736885__340.jpg');
-scene.background = spaceTexture;
-*/
-const controls = new OrbitControls(camera, renderer.domElement);
+//camera control
+//const controls = new OrbitControls(camera, renderer.domElement);
 
+//animation 
 function animate(){
   requestAnimationFrame(animate);
   Outer1.rotation.y += 0.03;
   Outer2.rotation.y += -0.03;
   Outer3.rotation.y += 0.02;
-  controls.update();
+  //controls.update();
   renderer.render(scene,camera);
 }
-
 animate();
