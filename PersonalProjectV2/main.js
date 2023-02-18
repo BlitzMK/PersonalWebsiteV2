@@ -1,6 +1,7 @@
 import './style.css'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { Vector3 } from 'three';
 
 
 const scene = new THREE.Scene();
@@ -14,13 +15,15 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize( window.innerWidth, window.innerHeight);
 
-camera.position.setZ(30);
+let camPosition = new Vector3(0,20,40);
+camera.rotateX(-.5);
+
 
 renderer.render(scene,camera);
 
 // defining the cell in the center of the site 
 const geometry = new THREE.TorusGeometry(20,2,10,100);
-const material = new THREE.MeshStandardMaterial({color:0x529EE9});
+const material = new THREE.MeshStandardMaterial({color:0xFCA311});
 const Outer1 = new THREE.Mesh(geometry, material);
 
 const geometry2 = new THREE.TorusGeometry(15,2,10,100);
@@ -68,6 +71,9 @@ function animate(){
   Outer1.rotation.y += 0.03;
   Outer2.rotation.y += -0.03;
   Outer3.rotation.y += 0.02;
+  camera.position.setX(camPosition.x);
+  camera.position.setY(camPosition.y);
+  camera.position.setZ(camPosition.z);
   //controls.update();
   renderer.render(scene,camera);
 }
