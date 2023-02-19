@@ -7,6 +7,13 @@
 
 }
 
+@font-face {
+  font-family:'Ultra';
+  src: url(PersonalProjectV2\Assets\Ultra.otf) format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 canvas {
   position: fixed;
   top: 0%;
@@ -21,19 +28,49 @@ main {
   position: absolute;
   width: 100%;
   margin: 0px auto;
-  padding: 120px 0px;
+  padding: 40px 0px;
   
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
 
 main > h1{
     
     color:var(--grey);
-    grid-column-start: 10;
+    grid-column-start: 6;
     grid-column-end: 12;
+    grid-row: 1;
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 2rem;
     margin-bottom: var(--spacing);
+    font-family: 'Ultra';
+    font-style: normal;
+  }
+
+header{
+  background-color: #FCA311;
+}
+.aboutMe{
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: var(--blue);
+  border-radius: 8px;
+}
+.aboutMe > h2{
+  font-family: 'Ultra';
+  font-size: 3rem;
+  color: var(--gold);
+  margin: 0;
+  padding:0;
+  padding-left: 20px;
+
+}
+.aboutMe > p{
+  font-size: 1.5rem;
+  padding-left: 20px;
+  padding-right: 5px;
 }
