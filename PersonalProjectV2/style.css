@@ -28,11 +28,11 @@ main {
   position: absolute;
   width: 100%;
   margin: 0px auto;
-  padding: 40px 0px;
+  padding: 0px 0px;
   
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(100, 5%);
 }
 
 main > h1{
@@ -55,8 +55,8 @@ header{
 .aboutMe{
   grid-column-start: 3;
   grid-column-end: 6;
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 10;
+  grid-row-end: 22;
   background-color: var(--blue);
   border-radius: 8px;
 }
@@ -67,10 +67,48 @@ header{
   margin: 0;
   padding:0;
   padding-left: 20px;
-
 }
 .aboutMe > p{
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding-left: 20px;
+  padding-right: 5px;
+}
+
+.WorkExp{
+  grid-column-start: 7;
+  grid-column-end: 12;
+  grid-row-start: 15;
+  grid-row-end: 30;
+  background-color: var(--blue);
+  border-radius: 8px;
+}
+.WorkExp > h1{
+  font-family: 'Ultra';
+  font-size: 3rem;
+  color: var(--gold);
+  margin: 0;
+  padding:0;
+  padding-left: 20px;
+}
+.WorkExp > h2{
+  font-family: 'Ultra';
+  font-size: 2rem;
+  color: var(--gold);
+  margin: 0;
+  padding:0;
+  padding-top: 10px;
+  padding-left: 30px;
+}
+.WorkExp > .WorkPlace{
+  font-size: 1.3rem;
+  padding-top: 12px;
+  padding-left: 30px;
+  padding-right: 5px;
+}
+.WorkExp > p{
+  font-size: 1.2rem;
+  margin:0%;
+  padding-top: 5px;
+  padding-left: 35px;
   padding-right: 5px;
 }
