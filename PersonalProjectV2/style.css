@@ -112,3 +112,20 @@ header{
   padding-left: 35px;
   padding-right: 5px;
 }
+
+.SkillsList{
+  grid-column-start: 2;
+  grid-column-end: 6;
+  grid-row-start: 29;
+  grid-row-end: 40;
+  background-color: var(--blue);
+  border-radius: 8px;
+}
+.SkillsList > h1{
+  font-family: 'Ultra';
+  font-size: 3rem;
+  color: var(--gold);
+  margin: 0;
+  padding:0;
+  padding-left: 20px;
+}
