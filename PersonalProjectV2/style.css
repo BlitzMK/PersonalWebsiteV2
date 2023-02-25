@@ -130,6 +130,18 @@ header{
   padding:0;
   padding-left: 20px;
 }
+.SkillIcons{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.SkillIcons > img{
+  width: 70px;
+  height: 70px;
+  vertical-align: middle;
+  align-self: center;
+  padding: 15px;
+}
 
 
 input[type=text], select, textarea {
@@ -163,8 +175,8 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: var(--blue);
   padding: 20px;
-  grid-column-start: 5;
-  grid-column-end: 10;
-  grid-row-start: 32;
-  grid-row-end: 42;
+  grid-column-start: 2;
+  grid-column-end: 12;
+  grid-row-start: 43;
+  grid-row-end: 50;
 }
