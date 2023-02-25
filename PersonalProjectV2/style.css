@@ -136,7 +136,7 @@ header{
   grid-template-rows: repeat(5, 1fr);
 }
 .SkillIcons > img{
-  width: 70px;
+  
   height: 70px;
   vertical-align: middle;
   align-self: center;
